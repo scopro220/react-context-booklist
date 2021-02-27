@@ -4,10 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 export const BookContext = createContext();
 
 const BookContextProvider = (props) => {
-  const [books, setBooks] = useState([
-    { title: "name of the wind", author: "patrick rothfuss", id: uuidv4() },
-    { title: "the final empire", author: "brandon sanderson", id: uuidv4() },
-  ]);
+  const [books, setBooks] = useState([]);
 
   const addBook = (title, author) => {
     setBooks([...books, { title, author, id: uuidv4() }]);
